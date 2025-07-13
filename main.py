@@ -13,10 +13,27 @@ async def on_ready():
 
 async def main():
     # Load extension đúng cách (phải await)
+    await bot.load_extension("addmoney")
+    await bot.load_extension("bank") 
+    await bot.load_extension("bj")
+    await bot.load_extension("cash")
+    await bot.load_extension("claim")
+    await bot.load_extension("coinflip")
+    await bot.load_extension("give")
     await bot.load_extension("daily")
+    await bot.load_extension("hhelp")
+    await bot.load_extension("hlevel")
+    await bot.load_extension("hpage")
+    await bot.load_extension("inventory")
+    await bot.load_extension("profile")
+    await bot.load_extension("shop")
+    await bot.load_extension("top")
+    await bot.load_extension("vatpham")
+    await bot.load_extension("xoso")
+
 
     # Dán token của bạn ở đây
-    TOKEN = "MTM5NDAyNjgxMjc5OTA2MjA3Ng.G5-uXD.4eq7D090EBfflDhmatRoPbqe5qpKsBpM9fwKpM"
+    TOKEN = "MTM5NDAyNjgxMjc5OTA2MjA3Ng.GDCpxf.XXePuwZR9wJhqbRtDVYhrfFOb8KR0NXfcd1uZE"
     await bot.start(TOKEN)
 
 # Chạy bot đúng cách với asyncio
