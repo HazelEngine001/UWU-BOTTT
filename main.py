@@ -10,6 +10,8 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 @bot.event
 async def on_ready():
     print(f"✅ Logged in as {bot.user}!")
+from keep_alive import keep_alive
+keep_alive()
 
 async def main():
     # Load extension đúng cách (phải await)
