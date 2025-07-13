@@ -75,5 +75,5 @@ client.on(Events.MessageCreate, async message => {
     }
 });
 
-// Log in to Discord with your app's token
+require('dotenv').config();
 client.login(process.env.TOKEN);
