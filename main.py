@@ -49,7 +49,7 @@ async def setup_hook():
 
 
 # Nhớ thay token ở đây bằng token bot của bạn
-TOKEN = "MTM5MzkyOTY2Mzk5ODQ1OTkzNA.GVBYSw.gppNMG9qYRYsLleCWqKj4EPqz1PFql-0GHGMlA"
+TOKEN = "MTM5NDAyNjgxMjc5OTA2MjA3Ng.GRM-91.s4fp1kmNhAMHOBorYLIXPQCQNikOE6gtoUHV4c"
 
 # Chạy bot
 bot.run(TOKEN)
