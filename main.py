@@ -12,7 +12,9 @@ bot = commands.Bot(command_prefix='?', intents=intents)
 @bot.event
 async def on_ready():
     print(f'✅ Bot đã đăng nhập với tên: {bot.user}')
-
+from keep_alive import keep_alive
+keep_alive()
+  
 # Load lệnh coinflip
 @bot.event
 async def setup_hook():
