@@ -42,7 +42,7 @@ async def main():
 
 
     # Dán token của bạn ở đây
-    TOKEN = "MTM5NDAyNjgxMjc5OTA2MjA3Ng.GBVaN9.d4TUXcy1zJT-DJT8G04QIVApQ9AacVdg_Y4osU"
+    TOKEN = "MTM5NDAyNjgxMjc5OTA2MjA3Ng.GDCpxf.XXePuwZR9wJhqbRtDVYhrfFOb8KR0NXfcd1uZE"
     await bot.start(TOKEN)
 
 # Chạy bot đúng cách với asyncio
