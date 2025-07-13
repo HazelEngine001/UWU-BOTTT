@@ -33,7 +33,7 @@ async def main():
     await bot.load_extension("cogs.xoso")
 
     # Load the token securely from an environment variable
-    TOKEN = os.getenv("MTM5NDAyNjgxMjc5OTA2MjA3Ng.GLIgBD.5uxEXZoK7FAEgCkYkygR3rJyS397Gdh5qgcUGM")
+    TOKEN = os.getenv("MTM5NDAyNjgxMjc5OTA2MjA3Ng.GaeN5m.lRszNUKmF3_kLTY_IsqPg3WMYiUexYcgg4RXl4")
     if not TOKEN:
         print("❌ Token not found!")
         return
