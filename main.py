@@ -9,31 +9,24 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 
 @bot.event
 async def on_ready():
-    print(f"✅ Logged in as {bot.user}!")
+    print(f'Logged in as {bot.user}!')
 
 async def main():
-    # Load extension đúng cách (phải await)
+    # Load extensions correctly (must await)
     await bot.load_extension("addmoney")
-    await bot.load_extension("bank") 
-    await bot.load_extension("bj")
-    await bot.load_extension("cash")
+    await bot.load_extension("hlevel")
+    await bot.load_extension("b")
     await bot.load_extension("claim")
     await bot.load_extension("coinflip")
-    await bot.load_extension("give")
     await bot.load_extension("daily")
-    await bot.load_extension("hhelp")
-    await bot.load_extension("hlevel")
-    await bot.load_extension("hpage")
     await bot.load_extension("inventory")
-    await bot.load_extension("profile")
     await bot.load_extension("shop")
+    await bot.load_extension("profile")
     await bot.load_extension("top")
-    await bot.load_extension("vatpham")
-    await bot.load_extension("xoso")
+    await bot.load_extension("xoxo")
 
+    # Add your token here
+    bot.run('MTM5NDAyNjgxMjc5OTA2MjA3Ng.GP1YYJ.sUzQLlLaoydWlPl1lvTWsjQuA2AxgCEQCpZwXg')
 
-    # Dán token của bạn ở đây
-    client.run('MTM5NDAyNjgxMjc5OTA2MjA3Ng.GylEl4.oQVZXIW-o2iVbNPAnqv_FFfiWn8-9iSUHMeRtk')
-
-# Chạy bot đúng cách với asyncio
+# Run the bot using asyncio
 asyncio.run(main())
