@@ -16,7 +16,7 @@ async def main():
     await bot.load_extension("daily")
 
     # Dán token của bạn ở đây
-    TOKEN = "MTM5MzkyOTY2Mzk5ODQ1OTkzNA.GvCQY8.SwYuhid9PTXqaKi3Jy6_xw7DIBcJZiaCP_GUNU"
+    TOKEN = "MTM5NDAyNjgxMjc5OTA2MjA3Ng.G5-uXD.4eq7D090EBfflDhmatRoPbqe5qpKsBpM9fwKpM"
     await bot.start(TOKEN)
 
 # Chạy bot đúng cách với asyncio
