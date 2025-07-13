@@ -1,53 +1,23 @@
 import discord
 from discord.ext import commands
+import asyncio
 
-# Tùy chỉnh intents
 intents = discord.Intents.default()
-intents.message_content = True  # Bắt buộc để đọc tin nhắn người dùng
+intents.message_content = True
 
-# Khởi tạo bot với prefix ?
-bot = commands.Bot(command_prefix='?', intents=intents)
+bot = commands.Bot(command_prefix="!", intents=intents)
 
-# Khi bot đăng nhập thành công
 @bot.event
 async def on_ready():
-    print(f'✅ Bot đã đăng nhập với tên: {bot.user}')
+    print(f"✅ Logged in as {bot.user}!")
 
-# Load lệnh coinflip
-@bot.event
-async def setup_hook():
-    await bot.load_extension("coinflip")
+async def main():
+    # Load extension đúng cách (phải await)
     await bot.load_extension("daily")
-    await bot.load_extension("bank")
-    await bot.load_extension("top")
-    await bot.load_extension("profile")
-    await bot.load_extension("cash")
-    await bot.load_extension("give")
-    await bot.load_extension("shop")
-    await bot.load_extension("vatpham")
-    await bot.load_extension("inventory")
-    await bot.load_extension("equip")
-    await bot.load_extension("hpage")
-    await bot.load_extension("hlevel")
-    await bot.load_extension("hhelp")
-    await bot.load_extension("addmoney")
-    await bot.load_extension("bj")
-    await bot.load_extension("xoso")
-    
 
+    # Dán token của bạn ở đây
+    TOKEN = "MTM5MzkyOTY2Mzk5ODQ1OTkzNA.GvCQY8.SwYuhid9PTXqaKi3Jy6_xw7DIBcJZiaCP_GUNU"
+    await bot.start(TOKEN)
 
-
-
-
-
-
-
-
-
-
-
-# Nhớ thay token ở đây bằng token bot của bạn
-TOKEN = "MTM5MzkyOTY2Mzk5ODQ1OTkzNA.GVBYSw.gppNMG9qYRYsLleCWqKj4EPqz1PFql-0GHGMlA"
-
-# Chạy bot
-bot.run(TOKEN)
+# Chạy bot đúng cách với asyncio
+asyncio.run(main())
